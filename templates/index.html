@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+<link class="jsbin" href="{{ url_for('static', filename='styles/jquery-ui.css') }}" rel="stylesheet" type="text/css" />
+<script class="jsbin" src="{{ url_for('static', filename='js/jquery-3.4.0.min.js') }}"></script>
+<link  href="{{ url_for('static', filename='styles/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+
+   <title>Word cloud Generator!</title>
+  </head>
+  
+  <body>
+  <div style = "height:50px">
+  </div>
+  
+  <div class="card-columns d-flex justify-content-center">
+  
+    <div class="card" style="margin:100px; width: 18rem; " >
+      <img src="../static/img/WCC.gif" class="card-img-top" id = "blah">
+      <div class="card-body">
+        <h5 class="card-title">Choose image for your word cloud </h5>
+        <form action="/" method="post" enctype="multipart/form-data">
+          <input onchange="readURL(this);" src="#" type="file" name="image" class="form-control-file" accept="image/*"></br>
+          <textarea rows="4" cols="25" placeholder="Words for your word cloud..." name="words"></textarea>
+          <input class="btn btn-primary" type="submit">
+        </form>
+        
+      </div>
+    </div>
+    
+    
+    <div class = "card", style = "height:450px; width:500px; margin-top:100px">
+    
+    <img id ="imge" src = {{img}}, style="width:100%;">
+    </div>
+    </div>
+<script>
+function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
+    
+    <script language="javascript" type="text/javascript">
+    var d = new Date(); 
+    document.getElementById("imge").src = 
+      "../static/img/chrt.jpeg?ver=" + 
+       d.getTime();
+    </script>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
