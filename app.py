@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 from wordcloud import WordCloud, STOPWORDS 
 import matplotlib.pyplot as plt 
-import pandas as pd 
+
 import pathlib
 import os
 
